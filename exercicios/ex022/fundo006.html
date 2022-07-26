@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is An Empty Page</title>
+    <style>
+        body {
+            height: 100vh;/*Configurando o tamanho da viewport(tela de exebição)*/
+            /*Atenção!!!
+            Dica Valiosa: O ideal é que se configure uma cor de fundo para caso a imagem do fundo do site seja carregada muito depois, com a cor configurada o usuário já pode ir indo consumir o conteúdo*/
+            background-color: black;
+            background-image: url('images/wallpaper002.jpg');
+            /*Tirando a repetição de uma imagem de fundo do site*/
+            background-position: center center;/*Posicionando no centro*/
+            background-repeat: no-repeat;/*Tirando a repetição da imagem*/
+            /*Propriedades do background-size temos:
+            - 100% e 100%(para altura e largura);
+            - auto (propriedade default e automática do interpretador)
+            - contain (garante que a imagem será exibida 100% da imagem)
+            - cover (ou cobrir, ele cobre a tela inteira mesmo que para isso tenha que picotar a imagem é uma propriedade interessante)*/
+            background-size: cover;
+
+        }
+
+        main {
+            background-color: white;
+            width: 400px;
+            padding: 10px;
+            margin: auto;
+            border: 1px solid darkblue;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teste de imagem de fundo</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ut explicabo dolores optio quae soluta ea ex, perferendis, maiores, eveniet nobis ullam voluptas quasi sit repellat. Voluptatum maiores repudiandae nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam ducimus voluptatum perferendis incidunt velit quia distinctio consequatur itaque aliquid, eligendi impedit. Quibusdam eaque ipsam ab distinctio. Possimus ea eveniet maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nesciunt ipsum quis dolore magni tempore, sapiente veniam consequuntur illo sunt numquam itaque voluptatem ratione repellendus laborum? Aliquid omnis debitis eligendi.</p>
+    </main>
+</body>
+</html>
