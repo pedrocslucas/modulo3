@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Is An Empty Page</title>
+    <title>Fundo fixo de tela</title>
     <style>
+        /*!!!Fundo Fixo é a mesma coisa que vínculo, ou seja, 'background-attachment'!!!*/
+
         body {
             height: 100vh;/*Configurando o tamanho da viewport(tela de exebição)*/
             /*Atenção!!!
@@ -21,12 +23,23 @@
             - contain (garante que a imagem será exibida 100% da imagem)
             - cover (ou cobrir, ele cobre a tela inteira mesmo que para isso tenha que picotar a imagem é uma propriedade interessante)*/
             background-size: cover;
+            /*Para deixar o fundo de tela fixo temos o 'background-attachment' com as seguintes propriedades:
+            - scroll (default, que permite o fundo rolar com o conteúdo)
+            - fixed (deixa o fundo fixo mesmo que o conteúdo seja maior)
+            */
+            background-attachment: fixed;
 
+
+            /*SHORTHAND - 'background'
+                color > image > position > repeat > *size(na documentação oficial diz que é assim, porém na prática não funciona, desta forma, tiramos ele e adicionamos depois) > attachment
+            */
+            background: black url('images/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover;
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;/*Espreme o conteúdo até o tamanho que precisar*/
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
