@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas Completas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            background-color: lightyellow;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        table {
+            text-align: center;
+            border-collapse: collapse;
+            margin: auto;
+            background-color: white;
+        }
+
+        caption {
+            color: black;
+            font-weight: bold;
+            padding: 8px;
+            font-size: 1.5em;
+        }
+
+        /*Cabeçalho Fixo*/
+        thead > tr > th {
+            position: sticky;/*Posicionamento Colado*/
+            top: -1px;/*Colar no topo*/
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        .title{
+            background-color: lightgray;
+        }
+
+        .women {
+            background-color: lightpink;
+        }
+
+        .men {
+            background-color: lightblue;
+        }
+
+        td, th {
+            padding: 0px 40px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Tabelas Completas</h1>
+
+    <table>
+        <caption>Tabelas de Filmes Favoritos</caption>
+        <thead>
+            <tr>
+                <th scope="col" class="title">Grupo</th>
+                <th scope="col" class="title">Nomes</th>
+                <th class="title" colspan="3" scope="colgroup">Filmes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Mulheres-->
+            <tr>
+                <!--
+                    TODO tag 'th' tem que utilizar ESCOPO de linhas ou de colunas:
+                    - utilizando o parêmetro 'scope'
+                    podemos classificar em:
+                    - 'row' (somente uma linha)
+                    - 'col' (somente uma coluna)
+                    - 'rowgroup' (quando possui mais de 1 linha baseada num 'th')
+                    - 'colgroup' (quando possui mais de 1 coluna baseada num 'th')
+                -->
+                <th class="women" rowspan="3" scope="rowgroup">Mulheres</th>
+                <td>Ana Maria Santos</td>
+                <td>Alien</td>
+                <td>Rambo</td>
+                <td>Vingadores</td>
+            </tr>
+            <tr>
+                <td>Beatriz Souza</td>
+                <td>Hulk</td>
+                <td>Inception</td>
+                <td>Batman</td>
+            </tr>
+            <tr>
+                <td>Cláudia Melo</td>
+                <td>Oblivion</td>
+                <td>Matrix</td>
+                <td>Big Hero</td>
+            </tr>
+            <!--Homens-->
+            <tr>
+                <th class="men" rowspan="3" scope="rowgroup">Homens</th>
+                <td>Bruno Mendonça</td>
+                <td>Intocáveis</td>
+                <td>Amnésia</td>
+                <td>Gladiador</td>
+            </tr>
+            <tr>
+                <td>Daniel Lourenço</td>
+                <td>Wall-E</td>
+                <td>Oldboy</td>
+                <td>Dangal</td>
+            </tr>
+            <tr>
+                <td>Fabiano Mota</td>
+                <td>Star Wars 5</td>
+                <td>Taxi Driver</td>
+                <td>Toy Story</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
